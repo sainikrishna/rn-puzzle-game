@@ -20,6 +20,7 @@ const Draggable = ({ children, positions, id }) => {
 
   const panGesture = useAnimatedGestureHandler({
     onStart: (ent, ctx) => {
+      console.log("Draggable onStart", {ent, ctx})
       ctx.startX = traslateX.value
       ctx.startY = traslateY.value
       isGestureActive.value = true
